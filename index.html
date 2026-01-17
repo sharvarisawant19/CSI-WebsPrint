@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Event Discovery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+   <div class="header-top">
+  <div>
+    <h1>Campus Events</h1>
+    <p>Discover upcoming events in your college</p>
+  </div>
+
+  <button class="admin-btn">🔒 Admin</button>
+</div>
+
+
+    <input type="text" id="searchInput" placeholder="Search by event or club">
+
+    <div class="tabs">
+      <button class="tab-button active" data-category="All">All</button>
+      <button class="tab-button" data-category="Technical">Technical</button>
+      <button class="tab-button" data-category="Workshop">Workshop</button>
+      <button class="tab-button" data-category="Cultural">Cultural</button>
+      <button class="tab-button" data-category="Sports">Sports</button>
+      <button class="tab-button" data-category="Lecture">Lecture</button>
+      <button class="tab-button" data-category="Club Activity">Club Activity</button>
+    </div>
+
+    <select id="clubSelect"></select>
+
+    <p id="eventCount"></p>
+  </div>
+</header>
+
+<main class="container">
+  <div id="eventGrid" class="event-grid"></div>
+
+  <div id="emptyState" class="empty-state">
+    <h3>No events found</h3>
+    <p>Try changing filters</p>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div id="eventModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
